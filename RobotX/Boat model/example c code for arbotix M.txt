@@ -1,0 +1,188 @@
+
+/* ========================================================================== */
+/*                          HikariKey/ServoControl
+/*  This code is a good starting place for using the 
+/*  keyboard of a computer to control servos using the arbotix.
+/*  Send data in the form of p (servo ID 2 digets) , (goal position 4 digets) CR
+/*  You can also send it letters from the keyboard and have it play                                                                          */
+/*  sequences based on which letters you send it.                                                             */
+/*  If you use this you want to change the "iPoses01.h to whatever 
+/*  your poses are called.  You also want to change the if thens to 
+/*  things that make sense to you.
+/*  
+/*  This code was written by Darkback2 with more help than not by
+/*  Chris Novak
+/*  lnxfergy (Michael Ferguson, inventor of the arbotix)
+/*  Upgrayd
+/*  and the rest of the Trossen Robotics Forum.
+/* ========================================================================== */
+
+#include <ax12.h>
+#include <BioloidController.h>
+#include "iPose01.h"  // exported from PyPose
+
+BioloidController bioloid = BioloidController(1000000);
+
+void setup()
+{  
+    // need to start the serial port
+    Serial.begin(38400);
+
+    // recommended pause
+    delay(100);
+
+    // stand up slowly    
+    bioloid.loadPose(Up);
+    bioloid.readPose();
+    bioloid.interpolateSetup(500);
+    
+    while(bioloid.interpolating > 0)
+    {
+        bioloid.interpolateStep();
+        delay(3);
+    }
+}
+
+void loop() {
+    char cmd[8];
+    int startByte = 0;
+    
+    // if there are bytes waiting on the serial port
+    if(Serial.available() > 0) {
+      // read the incoming byte
+      startByte = Serial.read(); 
+      // toggle LED so we know johnny5 is alive
+      digitalWrite(0,HIGH-digitalRead(0));  
+    } // end Serial.available()
+    if(startByte == 'p') {
+      // get the command from the serial port
+      while(Serial.available() < 8); // wait for data to arrive, do nothing      
+      for(int i=0;i<8;i++){
+        cmd[i] = Serial.read();
+      } //this creates an array that takes in the data from the serial port      
+      // convert command to two numbers
+      int servoNum = 0;
+      int servoPos = 0;
+      
+      servoNum = (cmd[0]-48)*10 + (cmd[1]-48);
+      //builds the 2 diget servo Id number
+      servoPos = (cmd[3]-48)*1000 + (cmd[4]-48)*100 + (cmd[5]-48)*10 + (cmd[6]-48);
+      //builds the 4 diget goal position
+     SetPosition(servoNum,servoPos);
+     //sets servo position using 2 numbers one for servo, other for position.
+      // debug
+      Serial.print("cmd array:");
+      for(int i=0;i<8;i++){
+        Serial.print(cmd[i]);
+      }
+      Serial.println("----");
+     Serial.print("servoNum:");
+      Serial.println(servoNum);
+       Serial.print("servoPos:");
+      Serial.println(servoPos);
+      
+    }// end if(startByte == 'p') {
+    else {
+      //process commands other than servo positions
+      // only process if we aren't currently doing a sequence
+        if(bioloid.playing == 0)
+        {               
+            if(startByte == 'w') //if I press w walk forward
+            {
+                bioloid.playSeq(LRLean);
+            }
+            if(startByte == 'W') //if I press W walk forward slow
+            {
+                bioloid.playSeq(WalkForward03);
+            }
+            else if(startByte == 's') //if I press s stop moving
+            {
+                bioloid.playSeq(UP);    
+            }
+            else if(startByte == 'x') //if I press x defensive pose
+            {
+                bioloid.playSeq(rest01);    
+            }
+            else if(startByte == 'g') //if I press s get up facedown
+            {
+                bioloid.playSeq(facedown);    
+            }
+            else if(startByte == 'b') //if I press b roll over
+            {
+                bioloid.playSeq(backtofront);    
+            }
+            else if(startByte == 'q') //if I press q turn left
+            {
+                bioloid.playSeq(LeftTurn);    
+            }
+            else if(startByte == 'a') //if I press a sidestep left
+            {
+                bioloid.playSeq(SideLT);    
+            }
+            else if(startByte == 'e') //if I press e turn right
+            {
+                bioloid.playSeq(RightTurn);    
+            }
+            else if(startByte == 'd')//if I press d sidestep right
+            {
+                bioloid.playSeq(SideRT);
+            }
+      
+            else if(startByte == 'j') //if I press j attack left
+            {
+                bioloid.playSeq(LA); 
+            }
+      
+            else if(startByte == 'l') //if I press l attack right
+            {
+                bioloid.playSeq(RA);
+            }
+            else if(startByte == 'k') //if I press k right punch attack front
+            {
+                bioloid.playSeq(RightPunch);
+            }
+             else if(startByte == 'i') //if I press i front push
+            {
+                bioloid.playSeq(FFrontAttack);
+            }
+            else if(startByte == 'm') //if I press m restPunch
+            {
+                bioloid.playSeq(RestPunchCombo);
+            }
+            else if(startByte == 't') //if I press t restPunch
+            {
+                bioloid.playSeq(FDrop);
+            }
+            else if(startByte == '1') //if I press 1 dance 01
+            {
+                bioloid.playSeq(DanceS01);
+            }
+            else if(startByte == '2') //if I press 1 dance 02
+            {
+                bioloid.playSeq(DanceS02);
+            }
+            else if(startByte == '3') //if I press 3 dance 03
+            {
+                bioloid.playSeq(DanceS03);
+            }
+            else if(startByte == '4') //if I press 4 dance 04
+            {
+                bioloid.playSeq(DanceS04);
+            }
+            else if(startByte == '5') //if I press 5 dance 05
+            {
+                bioloid.playSeq(DanceS05);
+            }
+        } 
+    
+    
+    if(bioloid.playing > 0)
+    {
+        // continue sequence
+        bioloid.play();  
+    }
+      
+    }// end else
+} // end loop()
+ 
+Last edited by lnxfergy; 11-29-2010 at 12:29 AM. Reason: fixing my forum handle..... bwhahaha 

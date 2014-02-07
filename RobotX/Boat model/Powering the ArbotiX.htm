@@ -1,0 +1,202 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0064)http://learn.trossenrobotics.com/arbotix/34-powering-the-arbotix -->
+<!DOCTYPE html PUBLIC "" ""><HTML lang="en-gb" lang="en-gb" 
+xml:lang="en-gb"><HEAD><META content="IE=11.0000" http-equiv="X-UA-Compatible">
+		 
+<META name="viewport" content="width=device-width, initial-scale=1.0">	       
+<META http-equiv="content-type" content="text/html; charset=utf-8">   
+<META name="author" content="Super User">   
+<META name="description" content="Learn Robotics!">   
+<META name="GENERATOR" content="MSHTML 11.00.9600.16476">   <TITLE>Powering the 
+ArbotiX</TITLE>   <LINK href="http://learn.trossenrobotics.com/arbotix/26-arbotix/arbotix-advanced-topics/34-powering-the-arbotix" 
+rel="canonical">   <LINK title="Search Learnbotics" href="http://learn.trossenrobotics.com/component/search/?Itemid=106&amp;catid=26&amp;id=34&amp;format=opensearch" 
+rel="search" type="application/opensearchdescription+xml">   <LINK href="Powering%20the%20ArbotiX_files/modal.css" 
+rel="stylesheet" type="text/css">   <LINK href="Powering%20the%20ArbotiX_files/menu-50c3b08cf0e172f85e85fe4000aaa4c2.css" 
+rel="stylesheet" type="text/css">   <LINK href="Powering%20the%20ArbotiX_files/menu-responsive-50c3b08cf0e172f85e85fe4000aaa4c2.css" 
+rel="stylesheet" type="text/css">   <LINK href="Powering%20the%20ArbotiX_files/grid-responsive.css" 
+rel="stylesheet" type="text/css">   <LINK href="Powering%20the%20ArbotiX_files/bootstrap.css" 
+rel="stylesheet" type="text/css">   <LINK href="Powering%20the%20ArbotiX_files/master-a07f8a36db3ecc4d92e165d697502255.css" 
+rel="stylesheet" type="text/css">   <LINK href="Powering%20the%20ArbotiX_files/mediaqueries.css" 
+rel="stylesheet" type="text/css">   
+<STYLE type="text/css">
+/* Multithumb 3.4.0 */
+ .multithumb {   }
+.multithumb_blog { width:115px !important;  }
+ .mtGallery {     margin: 5px;     align: center;     float: none;  }
+ .mtCapStyle {     font-weight: bold;    color: black;    background-color: #ddd;    margin: 0px 4px;    text-align:center;    white-space: pre-wrap; }
+#rt-logo {background: url(/images/resources/interbotix.png) 50% 0 no-repeat !important;}
+#rt-logo {width: 254px;height: 50px;}
+
+  </STYLE>
+   
+<SCRIPT src="Powering%20the%20ArbotiX_files/mootools-core.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="Powering%20the%20ArbotiX_files/core.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="Powering%20the%20ArbotiX_files/mootools-more.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="Powering%20the%20ArbotiX_files/modal.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="Powering%20the%20ArbotiX_files/browser-engines.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="Powering%20the%20ArbotiX_files/rokmediaqueries.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="Powering%20the%20ArbotiX_files/rokmediaqueries(1).js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="Powering%20the%20ArbotiX_files/responsive.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT type="text/javascript">
+
+		window.addEvent('domready', function() {
+
+			SqueezeBox.initialize({});
+			SqueezeBox.assign($$('a.modal'), {
+				parse: 'rel'
+			});
+		});
+
+  </SCRIPT>
+     
+<SCRIPT src="Powering%20the%20ArbotiX_files/jquery-git.js" type="text/javascript"></SCRIPT>
+    
+<SCRIPT>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1812945-4', 'trossenrobotics.com');
+  ga('send', 'pageview');
+
+</SCRIPT>
+ </HEAD> 
+<BODY class="logo-type-custom headerstyle-dark menustyle-dark footerstyle-dark font-family-helvetica font-size-is-default menu-type-dropdownmenu layout-mode-responsive col12"><HEADER 
+id="rt-top-surround">
+<DIV id="rt-top">
+<DIV class="rt-container">
+<DIV class="rt-grid-12 rt-alpha rt-omega">
+<DIV class="rt-block logo-block"><A id="rt-logo" href="http://learn.trossenrobotics.com/"></A><SPAN 
+id="rt-logo-accent"></SPAN>         </DIV></DIV>
+<DIV class="clear"></DIV></DIV></DIV>
+<DIV id="rt-header">
+<DIV class="rt-container">
+<DIV class="rt-grid-12 rt-alpha rt-omega">
+<DIV class="rt-block menu-block">
+<DIV class="gf-menu-device-container"></DIV>
+<UL class="gf-menu l1 ">
+  <LI class="item102 parent"><A class="item" href="http://learn.trossenrobotics.com/"> 
+                 InterbotiX Getting Started Guides            </A>
+  <DIV class="dropdown " style="width: 180px;">
+  <DIV class="column">
+  <UL class="level2">
+    <LI class="item104 parent"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-turrets"> 
+                   Robot Turrets            </A>
+    <DIV class="dropdown flyout " style="width: 180px;">
+    <DIV class="column">
+    <UL class="level3">
+      <LI class="item114"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-turrets/phantomx-turret"> 
+                     PhantomX Turret            </A></LI>
+      <LI class="item110"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-turrets/widowx-turret"> 
+                     WidowX Turret            </A></LI>
+      <LI class="item111"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-turrets/scorpionx-turret"> 
+                     ScorpionX Turret            </A></LI></UL></DIV></DIV></LI>
+    <LI class="item103 parent"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-arms"> 
+                   Robot Arms            </A>
+    <DIV class="dropdown flyout " style="width: 180px;">
+    <DIV class="column">
+    <UL class="level3">
+      <LI class="item116"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-arms/pincher-arm"> 
+                     PhantomX Pincher            </A></LI>
+      <LI class="item112"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-arms/reactor-arm"> 
+                     PhantomX Reactor            </A></LI>
+      <LI class="item113"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-arms/widowx-arm"> 
+                     WidowX            </A></LI></UL></DIV></DIV></LI>
+    <LI class="item105 parent"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-crawlers"> 
+                   Robot Crawlers            </A>
+    <DIV class="dropdown flyout " style="width: 180px;">
+    <DIV class="column">
+    <UL class="level3">
+      <LI class="item109"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-crawlers/phantomx-quadruped"> 
+                     PhantomX Quadruped            </A></LI>
+      <LI class="item115"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-crawlers/phantomx-hexapod"> 
+                     PhantomX Hexapod            
+  </A></LI></UL></DIV></DIV></LI></UL></DIV></DIV></LI>
+  <LI class="item106 parent active last"><A class="item" href="http://learn.trossenrobotics.com/arbotix"> 
+                 ArbotiX            </A>
+  <DIV class="dropdown " style="width: 180px;">
+  <DIV class="column">
+  <UL class="level2">
+    <LI class="item117"><A class="item" href="http://learn.trossenrobotics.com/arbotix/arbotix-quick-start"> 
+                   Quick Start Guide            </A></LI>
+    <LI class="item118"><A class="item" href="http://learn.trossenrobotics.com/arbotix/arbotix-getting-started"> 
+                   Getting Started            </A></LI>
+    <LI class="item120"><A class="item" href="http://learn.trossenrobotics.com/arbotix/arbotix-external-hardware"> 
+                   External Hardware            </A></LI>
+    <LI class="item119"><A class="item" href="http://learn.trossenrobotics.com/arbotix/arbotix-communication-controllers"> 
+                   Arbotix Communication &amp; Controllers            </A></LI>
+    <LI class="item121"><A class="item" href="http://learn.trossenrobotics.com/arbotix/arbotix-advanced-topics"> 
+                   Advanced Topics            </A></LI></UL></DIV></DIV></LI>
+  <LI class="item108"><A class="item" href="http://learn.trossenrobotics.com/contact"> 
+                 Contact            </A></LI></UL>
+<DIV class="clear"></DIV></DIV></DIV>
+<DIV class="clear"></DIV></DIV></DIV></HEADER>
+<DIV id="rt-drawer">
+<DIV class="rt-container">
+<DIV class="clear"></DIV></DIV></DIV>
+<DIV id="rt-mainbody-surround">
+<DIV class="rt-container">
+<DIV class="mb12" id="rt-main">
+<DIV class="rt-container">
+<DIV class="rt-grid-12 ">
+<DIV class="rt-block">
+<DIV id="rt-mainbody">
+<DIV class="component-content"><ARTICLE class="item-page">
+<H2><A href="http://learn.trossenrobotics.com/arbotix/arbotix-advanced-topics/34-powering-the-arbotix"> 
+Powering the ArbotiX</A>					 </H2>
+<P>There are many ways of powering the ArbotiX - this guide will discuss the two 
+primary methods.</P>
+<P>	To change between power methods, you will need to change the power jumper. 
+The power jumper pins are located next to the FTDI port, as shown below	 </P><A 
+title="" class="modal" style="cursor: url(/plugins/content/multithumb/magnify.cur), auto;" 
+href="http://learn.trossenrobotics.com/images/tutorials/arbotix/arbotix_power_select.jpg" 
+target="_blank"><IMG width="400" height="399" class="centered fritzing thumb multithumb" 
+alt="b_400_400_16777215_00_http___learn.trossenrobotics.com_images_tutorials_arbotix_arbotix_power_select.jpg" 
+src="Powering%20the%20ArbotiX_files/b_400_400_16777215_00_http___learn.trossenrobotics.com_images_tutorials_arbotix_arbotix_power_select.jpg"></A> 
+<H3>Powering the ArbotiX via FTDI/USB</H3>
+<P>	To power the ArbotiX via FTDI/USB, first set the power jumper to the FTDI 
+setting. This will route power from ywour FTDI device (which usually draw 5v 
+from your USB port). This method can be useful for development and testing. On 
+problem with powering the ArbotiX this way is that you cannot power the Motor 
+Controller, the Hobby servos, or the DYNAMIXEL servos from the FTDI port. To do 
+that, you must power the ArbotiX from the Power Terminals </P><IMG width="65" 
+height="147" class="centered fritzing multithumb" alt="arbotix_power_selec_ftdit.jpg" 
+src="Powering%20the%20ArbotiX_files/arbotix_power_selec_ftdit.jpg">
+<H3>Powering the ArbotiX from the Power Terminals </H3>
+<P>			The ArbotiX screw terminals are designed to work with a DC voltage between 
+6v and 24v. This voltage will be used for the motor controller, the Hobby Servo 
+ports, and the DYNAMIXEL ports, so be careful to not plug a motor in if the 
+voltage is too high for your attached devices. InterbotiX kits usually use 11.1V 
+is powered via LiPo batteries and 12V if powered via a SMPS/wall power supply. 
+This voltage is safe for the AX and MX DYNAMIXEL servos. </P>
+<P>		When the power jumper is switched to 'VIN', the ATMEGA644p chip will 
+receiver power through the 5v regulator. This regulator can supply up to 1A of 
+power for the ATMEGA644p and any input/output devices attached to the Analog, 
+Digital and IIC ports. This also supplies power for the 5V communication signal 
+used to communicate with the DYNAMIXEL servos. </P><IMG width="65" height="147" 
+class="centered fritzing multithumb" alt="arbotix_power_select_vin.jpg" src="Powering%20the%20ArbotiX_files/arbotix_power_select_vin.jpg">
+<P>See also <A href="http://learn.trossenrobotics.com/arbotix/11-lipo-battery-guide">LiPo 
+Guide</A>			 </P></ARTICLE></DIV></DIV></DIV></DIV>
+<DIV class="clear"></DIV></DIV></DIV></DIV></DIV>
+<DIV id="rt-bottom">
+<DIV class="rt-container">
+<DIV class="rt-grid-12 rt-alpha rt-omega">
+<DIV class="rt-block ">
+<DIV class="module-surround">
+<DIV class="module-content">
+<DIV class="search">
+<FORM class="form-inline" action="/arbotix" method="post"><LABEL class="element-invisible" 
+for="mod-search-searchword">Search...</LABEL> <INPUT name="searchword" class="inputbox search-query" id="mod-search-searchword" onfocus="if (this.value=='Search...') this.value='';" onblur="if (this.value=='') this.value='Search...';" type="text" size="20" maxlength="20" value="Search..."> 
+   	<INPUT name="task" type="hidden" value="search">    
+	 <INPUT name="option" type="hidden" value="com_search">    	 <INPUT name="Itemid" type="hidden" value="106"> 
+    </FORM></DIV></DIV></DIV></DIV></DIV>
+<DIV class="clear"></DIV></DIV></DIV></BODY></HTML>

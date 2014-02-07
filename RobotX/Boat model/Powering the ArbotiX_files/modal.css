@@ -1,0 +1,84 @@
+#sbox-overlay {
+	left: 0px; top: 0px; position: absolute; background-color: rgb(0, 0, 0);
+}
+#sbox-window {
+	padding: 10px; border-radius: 3px; text-align: left; overflow: visible; position: absolute; background-color: rgb(255, 255, 255); -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+[aria-hidden=true]#sbox-window {
+	display: none;
+}
+[aria-hidden=true]#sbox-overlay {
+	display: none;
+}
+#sbox-btn-close {
+	background: url("../images/modal/closebox.png") no-repeat center; border: currentColor; border-image: none; top: -15px; width: 30px; height: 30px; right: -15px; position: absolute;
+}
+.sbox-loading #sbox-content {
+	background-position: center; background-image: url("../images/modal/spinner.gif"); background-repeat: no-repeat;
+}
+#sbox-content {
+	width: 100%; height: 100%; overflow: auto; clear: both; background-color: rgb(255, 255, 255);
+}
+.sbox-content-image#sbox-content {
+	overflow: visible;
+}
+#sbox-image {
+	display: block;
+}
+.sbox-content-image img {
+	width: 100%; height: 100%; display: block;
+}
+.sbox-content-iframe#sbox-content {
+	overflow: visible;
+}
+.body-overlayed {
+	overflow: hidden;
+}
+.body-overlayed embed {
+	visibility: hidden;
+}
+.body-overlayed object {
+	visibility: hidden;
+}
+.body-overlayed select {
+	visibility: hidden;
+}
+#sbox-window embed {
+	visibility: visible;
+}
+#sbox-window object {
+	visibility: visible;
+}
+#sbox-window select {
+	visibility: visible;
+}
+.shadow#sbox-window {
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.7); -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.sbox-bg {
+	width: 33px; height: 40px; position: absolute;
+}
+.sbox-bg-n {
+	background: url("../images/modal/bg_n.png") repeat-x; left: 0px; top: -40px; width: 100%;
+}
+.sbox-bg-ne {
+	background: url("../images/modal/bg_ne.png") no-repeat; top: -40px; right: -33px;
+}
+.sbox-bg-e {
+	background: url("../images/modal/bg_e.png") repeat-y; top: 0px; height: 100%; right: -33px;
+}
+.sbox-bg-se {
+	background: url("../images/modal/bg_se.png") no-repeat; right: -33px; bottom: -40px;
+}
+.sbox-bg-s {
+	background: url("../images/modal/bg_s.png") repeat-x; left: 0px; width: 100%; bottom: -40px;
+}
+.sbox-bg-sw {
+	background: url("../images/modal/bg_sw.png") no-repeat; left: -33px; bottom: -40px;
+}
+.sbox-bg-w {
+	background: url("../images/modal/bg_w.png") repeat-y; left: -33px; top: 0px; height: 100%;
+}
+.sbox-bg-nw {
+	background: url("../images/modal/bg_nw.png") no-repeat; left: -33px; top: -40px;
+}
