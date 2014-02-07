@@ -1,0 +1,211 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0086)http://learn.trossenrobotics.com/arbotix/33-advanced-programming-guide-for-the-arbotix -->
+<!DOCTYPE html PUBLIC "" ""><HTML lang="en-gb" lang="en-gb" 
+xml:lang="en-gb"><HEAD><META content="IE=11.0000" http-equiv="X-UA-Compatible">
+		 
+<META name="viewport" content="width=device-width, initial-scale=1.0">	       
+<META http-equiv="content-type" content="text/html; charset=utf-8">   
+<META name="author" content="Super User">   
+<META name="description" content="Learn Robotics!">   
+<META name="GENERATOR" content="MSHTML 11.00.9600.16476">   <TITLE>Advanced 
+Programming guide for the ArbotiX</TITLE>   <LINK href="http://learn.trossenrobotics.com/arbotix/26-arbotix/arbotix-advanced-topics/33-advanced-programming-guide-for-the-arbotix" 
+rel="canonical">   <LINK title="Search Learnbotics" href="http://learn.trossenrobotics.com/component/search/?Itemid=106&amp;catid=26&amp;id=33&amp;format=opensearch" 
+rel="search" type="application/opensearchdescription+xml">   <LINK href="Advanced%20Programming%20guide%20for%20the%20ArbotiX_files/menu-50c3b08cf0e172f85e85fe4000aaa4c2.css" 
+rel="stylesheet" type="text/css">   <LINK href="Advanced%20Programming%20guide%20for%20the%20ArbotiX_files/menu-responsive-50c3b08cf0e172f85e85fe4000aaa4c2.css" 
+rel="stylesheet" type="text/css">   <LINK href="Advanced%20Programming%20guide%20for%20the%20ArbotiX_files/grid-responsive.css" 
+rel="stylesheet" type="text/css">   <LINK href="Advanced%20Programming%20guide%20for%20the%20ArbotiX_files/bootstrap.css" 
+rel="stylesheet" type="text/css">   <LINK href="Advanced%20Programming%20guide%20for%20the%20ArbotiX_files/master-a07f8a36db3ecc4d92e165d697502255.css" 
+rel="stylesheet" type="text/css">   <LINK href="Advanced%20Programming%20guide%20for%20the%20ArbotiX_files/mediaqueries.css" 
+rel="stylesheet" type="text/css">   
+<STYLE type="text/css">
+/* Multithumb 3.4.0 */
+ .multithumb {   }
+.multithumb_blog { width:115px !important;  }
+ .mtGallery {     margin: 5px;     align: center;     float: none;  }
+ .mtCapStyle {     font-weight: bold;    color: black;    background-color: #ddd;    margin: 0px 4px;    text-align:center;    white-space: pre-wrap; }
+#rt-logo {background: url(/images/resources/interbotix.png) 50% 0 no-repeat !important;}
+#rt-logo {width: 254px;height: 50px;}
+
+  </STYLE>
+   
+<SCRIPT src="Advanced%20Programming%20guide%20for%20the%20ArbotiX_files/mootools-core.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="Advanced%20Programming%20guide%20for%20the%20ArbotiX_files/core.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="Advanced%20Programming%20guide%20for%20the%20ArbotiX_files/mootools-more.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="Advanced%20Programming%20guide%20for%20the%20ArbotiX_files/browser-engines.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="Advanced%20Programming%20guide%20for%20the%20ArbotiX_files/rokmediaqueries.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="Advanced%20Programming%20guide%20for%20the%20ArbotiX_files/rokmediaqueries(1).js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="Advanced%20Programming%20guide%20for%20the%20ArbotiX_files/responsive.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT type="text/javascript"></SCRIPT>
+     
+<SCRIPT src="Advanced%20Programming%20guide%20for%20the%20ArbotiX_files/jquery-git.js" type="text/javascript"></SCRIPT>
+    
+<SCRIPT>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1812945-4', 'trossenrobotics.com');
+  ga('send', 'pageview');
+
+</SCRIPT>
+ </HEAD> 
+<BODY class="logo-type-custom headerstyle-dark menustyle-dark footerstyle-dark font-family-helvetica font-size-is-default menu-type-dropdownmenu layout-mode-responsive col12"><HEADER 
+id="rt-top-surround">
+<DIV id="rt-top">
+<DIV class="rt-container">
+<DIV class="rt-grid-12 rt-alpha rt-omega">
+<DIV class="rt-block logo-block"><A id="rt-logo" href="http://learn.trossenrobotics.com/"></A><SPAN 
+id="rt-logo-accent"></SPAN>         </DIV></DIV>
+<DIV class="clear"></DIV></DIV></DIV>
+<DIV id="rt-header">
+<DIV class="rt-container">
+<DIV class="rt-grid-12 rt-alpha rt-omega">
+<DIV class="rt-block menu-block">
+<DIV class="gf-menu-device-container"></DIV>
+<UL class="gf-menu l1 ">
+  <LI class="item102 parent"><A class="item" href="http://learn.trossenrobotics.com/"> 
+                 InterbotiX Getting Started Guides            </A>
+  <DIV class="dropdown " style="width: 180px;">
+  <DIV class="column">
+  <UL class="level2">
+    <LI class="item104 parent"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-turrets"> 
+                   Robot Turrets            </A>
+    <DIV class="dropdown flyout " style="width: 180px;">
+    <DIV class="column">
+    <UL class="level3">
+      <LI class="item114"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-turrets/phantomx-turret"> 
+                     PhantomX Turret            </A></LI>
+      <LI class="item110"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-turrets/widowx-turret"> 
+                     WidowX Turret            </A></LI>
+      <LI class="item111"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-turrets/scorpionx-turret"> 
+                     ScorpionX Turret            </A></LI></UL></DIV></DIV></LI>
+    <LI class="item103 parent"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-arms"> 
+                   Robot Arms            </A>
+    <DIV class="dropdown flyout " style="width: 180px;">
+    <DIV class="column">
+    <UL class="level3">
+      <LI class="item116"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-arms/pincher-arm"> 
+                     PhantomX Pincher            </A></LI>
+      <LI class="item112"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-arms/reactor-arm"> 
+                     PhantomX Reactor            </A></LI>
+      <LI class="item113"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-arms/widowx-arm"> 
+                     WidowX            </A></LI></UL></DIV></DIV></LI>
+    <LI class="item105 parent"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-crawlers"> 
+                   Robot Crawlers            </A>
+    <DIV class="dropdown flyout " style="width: 180px;">
+    <DIV class="column">
+    <UL class="level3">
+      <LI class="item109"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-crawlers/phantomx-quadruped"> 
+                     PhantomX Quadruped            </A></LI>
+      <LI class="item115"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-crawlers/phantomx-hexapod"> 
+                     PhantomX Hexapod            
+  </A></LI></UL></DIV></DIV></LI></UL></DIV></DIV></LI>
+  <LI class="item106 parent active last"><A class="item" href="http://learn.trossenrobotics.com/arbotix"> 
+                 ArbotiX            </A>
+  <DIV class="dropdown " style="width: 180px;">
+  <DIV class="column">
+  <UL class="level2">
+    <LI class="item117"><A class="item" href="http://learn.trossenrobotics.com/arbotix/arbotix-quick-start"> 
+                   Quick Start Guide            </A></LI>
+    <LI class="item118"><A class="item" href="http://learn.trossenrobotics.com/arbotix/arbotix-getting-started"> 
+                   Getting Started            </A></LI>
+    <LI class="item120"><A class="item" href="http://learn.trossenrobotics.com/arbotix/arbotix-external-hardware"> 
+                   External Hardware            </A></LI>
+    <LI class="item119"><A class="item" href="http://learn.trossenrobotics.com/arbotix/arbotix-communication-controllers"> 
+                   Arbotix Communication &amp; Controllers            </A></LI>
+    <LI class="item121"><A class="item" href="http://learn.trossenrobotics.com/arbotix/arbotix-advanced-topics"> 
+                   Advanced Topics            </A></LI></UL></DIV></DIV></LI>
+  <LI class="item108"><A class="item" href="http://learn.trossenrobotics.com/contact"> 
+                 Contact            </A></LI></UL>
+<DIV class="clear"></DIV></DIV></DIV>
+<DIV class="clear"></DIV></DIV></DIV></HEADER>
+<DIV id="rt-drawer">
+<DIV class="rt-container">
+<DIV class="clear"></DIV></DIV></DIV>
+<DIV id="rt-mainbody-surround">
+<DIV class="rt-container">
+<DIV class="mb12" id="rt-main">
+<DIV class="rt-container">
+<DIV class="rt-grid-12 ">
+<DIV class="rt-block">
+<DIV id="rt-mainbody">
+<DIV class="component-content"><ARTICLE class="item-page">
+<H2><A href="http://learn.trossenrobotics.com/arbotix/arbotix-advanced-topics/33-advanced-programming-guide-for-the-arbotix"> 
+Advanced Programming guide for the ArbotiX</A>					 </H2>
+<P>	There are two ways to program the ArbotiX - via the <STRONG>FTDI</STRONG> 
+port, or via the <STRONG>ISP</STRONG> port. Each programming method has its pros 
+can cons, and this guide will discuss some of them. </P>
+<H3>FTDI</H3>
+<P>	Using the FTDI device like the <A href="http://www.trossenrobotics.com/uartsbee">UartSBee</A> 
+or the <A 
+href="http://www.trossenrobotics.com/store/p/6406-FTDI-Cable-5V.aspx">FTDI-USB 
+Cable</A> is the most versatile way of programming the ArbotiX. By using the 
+FTDI port, you can easily program the ArbotiX as you would any other Arduino 
+compatible board - just choose the correct board type, and serial port, then hit 
+the upload button. In addition to programming the Arduino, the FTDI port acts as 
+a normal serial port, allowing you to send information to and receive 
+information from the ArbotiX. </P>
+<P>	There are two main disadvantages to programming via FTDI  </P>
+<P>	1)The XBee and the FTDI port share a hardware serial port. This means that 
+you can only have one of these devices connected at a time. To program the board 
+via FTDI, you will have to remove your XBee module every time you upload a 
+sketch  
+<P>	2)For programming via FTDI to work, a small program has to be pre-loaded 
+onto the ATMEGA644p chip. This program is called a Bootloader, and is 
+pre-programmed onto every new ArbotiX. This program takes up a small amount of 
+your memory. For applications that are using every last bit of the ATMEGA644p's 
+64k of space, you may need to work without the bootloader.  </P>
+<H3>ISP</H3>
+<P>	An ISP (In System Programmer) like the <A href="http://www.trossenrobotics.com/p/USB-AVR-Programmer.aspx">USB 
+AVR Programmer*</A> bypasses the serial port and the bootloader by programming 
+directly to the chip. Because there is no bootloader, you get the full space of 
+the ATMEGA644p. And because the ISP is not using a serial port, there is no need 
+to disconnect the XBee every time you re-program the ArbotiX, making the 
+development cycle for Xbee based projects much faster. </P>
+<P>	The main disadvantages of using an ISP are  </P>
+<P>	1)Because you bypass the serial port, you don't have access to the serial 
+terminal or normal serial communications, which can make debugging troublesome  
+</P>
+<P>	2)Programming a robot via ISP will remove the bootloader. This means that if 
+you want to resume programming the robot with an FTDI device, you will need to 
+'burn' the bootloader to the board. </P>
+<P>
+<H4>Notes on using an ISP programmer</H4>
+<UL>
+  <LI>Devices like the USB-AVR programmer may show up as multiple devices. From 
+  your device manager you can see one identified as 'Programmer'. If you cannot 
+  find this, try both ports 
+  <LI>To upload via an ISP programmer you will need the correct programmer 
+  chosen from 
+<PRE>Tools -&gt; Programmer
+</PRE>In the case of the USB-AVR programmer, 
+  choose <CODE>AVR ISP mkII(serial)</CODE> 
+  <LI>Instead of using the 'Upload button' you must use 
+<PRE>File -&gt; Upload Using Programmer
+</PRE></LI></UL>*Drivers for the USB-AVR 
+programmer can be found <A href="http://www.pololu.com/catalog/product/1300/resources">here</A> 
+under the 'resources' tab, see 'USB AVR Programmer Windows Drivers and Software. 
+Mac users, please see <A href="http://www.pololu.com/docs/0J36/5">here</A>		
+	</ARTICLE></DIV></DIV></DIV></DIV>
+<DIV class="clear"></DIV></DIV></DIV></DIV></DIV>
+<DIV id="rt-bottom">
+<DIV class="rt-container">
+<DIV class="rt-grid-12 rt-alpha rt-omega">
+<DIV class="rt-block ">
+<DIV class="module-surround">
+<DIV class="module-content">
+<DIV class="search">
+<FORM class="form-inline" action="/arbotix" method="post"><LABEL class="element-invisible" 
+for="mod-search-searchword">Search...</LABEL> <INPUT name="searchword" class="inputbox search-query" id="mod-search-searchword" onfocus="if (this.value=='Search...') this.value='';" onblur="if (this.value=='') this.value='Search...';" type="text" size="20" maxlength="20" value="Search..."> 
+   	<INPUT name="task" type="hidden" value="search">    
+	 <INPUT name="option" type="hidden" value="com_search">    	 <INPUT name="Itemid" type="hidden" value="106"> 
+    </FORM></DIV></DIV></DIV></DIV></DIV>
+<DIV class="clear"></DIV></DIV></DIV></BODY></HTML>

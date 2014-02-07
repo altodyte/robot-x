@@ -1,0 +1,418 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0068)http://learn.trossenrobotics.com/arbotix/7-arbotix-quick-start-guide -->
+<!DOCTYPE html PUBLIC "" ""><HTML lang="en-gb" lang="en-gb" 
+xml:lang="en-gb"><HEAD><META content="IE=11.0000" http-equiv="X-UA-Compatible">
+		 
+<META name="viewport" content="width=device-width, initial-scale=1.0">	       
+<META http-equiv="content-type" content="text/html; charset=utf-8">   
+<META name="author" content="Super User">   
+<META name="description" content="Learn Robotics!">   
+<META name="GENERATOR" content="MSHTML 11.00.9600.16476">   <TITLE>ArbotiX Quick 
+Start Guide</TITLE>   <LINK href="http://learn.trossenrobotics.com/arbotix/23-arbotix/arbotix-getting-started/7-arbotix-quick-start-guide" 
+rel="canonical">   <LINK title="Search Learnbotics" href="http://learn.trossenrobotics.com/component/search/?Itemid=106&amp;catid=23&amp;id=7&amp;format=opensearch" 
+rel="search" type="application/opensearchdescription+xml">   <LINK href="ArbotiX%20Quick%20Start%20Guide_files/modal.css" 
+rel="stylesheet" type="text/css">   <LINK href="ArbotiX%20Quick%20Start%20Guide_files/menu-50c3b08cf0e172f85e85fe4000aaa4c2.css" 
+rel="stylesheet" type="text/css">   <LINK href="ArbotiX%20Quick%20Start%20Guide_files/menu-responsive-50c3b08cf0e172f85e85fe4000aaa4c2.css" 
+rel="stylesheet" type="text/css">   <LINK href="ArbotiX%20Quick%20Start%20Guide_files/grid-responsive.css" 
+rel="stylesheet" type="text/css">   <LINK href="ArbotiX%20Quick%20Start%20Guide_files/bootstrap.css" 
+rel="stylesheet" type="text/css">   <LINK href="ArbotiX%20Quick%20Start%20Guide_files/master-a07f8a36db3ecc4d92e165d697502255.css" 
+rel="stylesheet" type="text/css">   <LINK href="ArbotiX%20Quick%20Start%20Guide_files/mediaqueries.css" 
+rel="stylesheet" type="text/css">   
+<STYLE type="text/css">
+/* Multithumb 3.4.0 */
+ .multithumb {   }
+.multithumb_blog { width:115px !important;  }
+ .mtGallery {     margin: 5px;     align: center;     float: none;  }
+ .mtCapStyle {     font-weight: bold;    color: black;    background-color: #ddd;    margin: 0px 4px;    text-align:center;    white-space: pre-wrap; }
+#rt-logo {background: url(/images/resources/interbotix.png) 50% 0 no-repeat !important;}
+#rt-logo {width: 254px;height: 50px;}
+
+  </STYLE>
+   
+<SCRIPT src="ArbotiX%20Quick%20Start%20Guide_files/mootools-core.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="ArbotiX%20Quick%20Start%20Guide_files/core.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="ArbotiX%20Quick%20Start%20Guide_files/mootools-more.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="ArbotiX%20Quick%20Start%20Guide_files/modal.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="ArbotiX%20Quick%20Start%20Guide_files/browser-engines.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="ArbotiX%20Quick%20Start%20Guide_files/rokmediaqueries.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="ArbotiX%20Quick%20Start%20Guide_files/rokmediaqueries(1).js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="ArbotiX%20Quick%20Start%20Guide_files/responsive.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT type="text/javascript">
+
+		window.addEvent('domready', function() {
+
+			SqueezeBox.initialize({});
+			SqueezeBox.assign($$('a.modal'), {
+				parse: 'rel'
+			});
+		});
+
+  </SCRIPT>
+     
+<SCRIPT src="ArbotiX%20Quick%20Start%20Guide_files/jquery-git.js" type="text/javascript"></SCRIPT>
+    
+<SCRIPT>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1812945-4', 'trossenrobotics.com');
+  ga('send', 'pageview');
+
+</SCRIPT>
+ </HEAD> 
+<BODY class="logo-type-custom headerstyle-dark menustyle-dark footerstyle-dark font-family-helvetica font-size-is-default menu-type-dropdownmenu layout-mode-responsive col12"><HEADER 
+id="rt-top-surround">
+<DIV id="rt-top">
+<DIV class="rt-container">
+<DIV class="rt-grid-12 rt-alpha rt-omega">
+<DIV class="rt-block logo-block"><A id="rt-logo" href="http://learn.trossenrobotics.com/"></A><SPAN 
+id="rt-logo-accent"></SPAN>         </DIV></DIV>
+<DIV class="clear"></DIV></DIV></DIV>
+<DIV id="rt-header">
+<DIV class="rt-container">
+<DIV class="rt-grid-12 rt-alpha rt-omega">
+<DIV class="rt-block menu-block">
+<DIV class="gf-menu-device-container"></DIV>
+<UL class="gf-menu l1 ">
+  <LI class="item102 parent"><A class="item" href="http://learn.trossenrobotics.com/"> 
+                 InterbotiX Getting Started Guides            </A>
+  <DIV class="dropdown " style="width: 180px;">
+  <DIV class="column">
+  <UL class="level2">
+    <LI class="item104 parent"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-turrets"> 
+                   Robot Turrets            </A>
+    <DIV class="dropdown flyout " style="width: 180px;">
+    <DIV class="column">
+    <UL class="level3">
+      <LI class="item114"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-turrets/phantomx-turret"> 
+                     PhantomX Turret            </A></LI>
+      <LI class="item110"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-turrets/widowx-turret"> 
+                     WidowX Turret            </A></LI>
+      <LI class="item111"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-turrets/scorpionx-turret"> 
+                     ScorpionX Turret            </A></LI></UL></DIV></DIV></LI>
+    <LI class="item103 parent"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-arms"> 
+                   Robot Arms            </A>
+    <DIV class="dropdown flyout " style="width: 180px;">
+    <DIV class="column">
+    <UL class="level3">
+      <LI class="item116"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-arms/pincher-arm"> 
+                     PhantomX Pincher            </A></LI>
+      <LI class="item112"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-arms/reactor-arm"> 
+                     PhantomX Reactor            </A></LI>
+      <LI class="item113"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-arms/widowx-arm"> 
+                     WidowX            </A></LI></UL></DIV></DIV></LI>
+    <LI class="item105 parent"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-crawlers"> 
+                   Robot Crawlers            </A>
+    <DIV class="dropdown flyout " style="width: 180px;">
+    <DIV class="column">
+    <UL class="level3">
+      <LI class="item109"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-crawlers/phantomx-quadruped"> 
+                     PhantomX Quadruped            </A></LI>
+      <LI class="item115"><A class="item" href="http://learn.trossenrobotics.com/interbotix/robot-crawlers/phantomx-hexapod"> 
+                     PhantomX Hexapod            
+  </A></LI></UL></DIV></DIV></LI></UL></DIV></DIV></LI>
+  <LI class="item106 parent active last"><A class="item" href="http://learn.trossenrobotics.com/arbotix"> 
+                 ArbotiX            </A>
+  <DIV class="dropdown " style="width: 180px;">
+  <DIV class="column">
+  <UL class="level2">
+    <LI class="item117"><A class="item" href="http://learn.trossenrobotics.com/arbotix/arbotix-quick-start"> 
+                   Quick Start Guide            </A></LI>
+    <LI class="item118"><A class="item" href="http://learn.trossenrobotics.com/arbotix/arbotix-getting-started"> 
+                   Getting Started            </A></LI>
+    <LI class="item120"><A class="item" href="http://learn.trossenrobotics.com/arbotix/arbotix-external-hardware"> 
+                   External Hardware            </A></LI>
+    <LI class="item119"><A class="item" href="http://learn.trossenrobotics.com/arbotix/arbotix-communication-controllers"> 
+                   Arbotix Communication &amp; Controllers            </A></LI>
+    <LI class="item121"><A class="item" href="http://learn.trossenrobotics.com/arbotix/arbotix-advanced-topics"> 
+                   Advanced Topics            </A></LI></UL></DIV></DIV></LI>
+  <LI class="item108"><A class="item" href="http://learn.trossenrobotics.com/contact"> 
+                 Contact            </A></LI></UL>
+<DIV class="clear"></DIV></DIV></DIV>
+<DIV class="clear"></DIV></DIV></DIV></HEADER>
+<DIV id="rt-drawer">
+<DIV class="rt-container">
+<DIV class="clear"></DIV></DIV></DIV>
+<DIV id="rt-mainbody-surround">
+<DIV class="rt-container">
+<DIV class="mb12" id="rt-main">
+<DIV class="rt-container">
+<DIV class="rt-grid-12 ">
+<DIV class="rt-block">
+<DIV id="rt-mainbody">
+<DIV class="component-content"><ARTICLE class="item-page">
+<H2><A href="http://learn.trossenrobotics.com/arbotix/arbotix-quick-start"> 
+ArbotiX Quick Start Guide</A>					 </H2><IMG width="300" style="float: right;" 
+alt="arbotixm_hw_all.png" src="ArbotiX%20Quick%20Start%20Guide_files/arbotixm_hw_all.png"> 
+<P>In this guide you will learn how to setup and program your Arbotix-M 
+Robocontroller. Because this is a Quick-Start guide, we will leave out many of 
+the details and intricacies of the ArbotiX-M Robocontroller.   To learn more, 
+check out the <A href="http://learn.trossenrobotics.com/arbotix">ArbotiX-M 
+Documentation</A> or keep a look out for this symbol 
+<PRE style="width: 100px; margin-left: 25%;"><IMG style="margin-right: auto; margin-left: auto; display: block;" src="ArbotiX%20Quick%20Start%20Guide_files/external.png"></PRE>
+which will take you to a page with more information on the topic. 
+<P></P>
+<P class="info" style="max-width: 500px;">This guide is designed around the 
+ArbotiX-M Robocontroller, however the setup instructions for the original 
+ArbotiX Robocontroller are almost identical. This guide will work for the 
+original ArbotiX, and it will note any differences. </P>
+<P>The main parts of setting up the ArbotiX-M are as follows: 
+<OL>
+  <LI><A href="http://learn.trossenrobotics.com/arbotix/7-arbotix-quick-start-guide#step1">Install 
+  the Arduino IDE</A>	 
+  <LI><A href="http://learn.trossenrobotics.com/arbotix/7-arbotix-quick-start-guide#step2">Install 
+  the FTDI drivers</A>	 
+  <LI><A href="http://learn.trossenrobotics.com/arbotix/7-arbotix-quick-start-guide#step3">Install 
+  the ArbotiX-M Hardware and Library Files</A>	 
+  <LI><A href="http://learn.trossenrobotics.com/arbotix/7-arbotix-quick-start-guide#step4">Connect 
+  your ArbotiX-M Robocontroller</A>	 
+  <LI><A href="http://learn.trossenrobotics.com/arbotix/7-arbotix-quick-start-guide#step5">Program 
+  the ArbotiX-M Robocontroller</A> </LI></OL>
+<P></P>
+<H3><A name="step1">Step 1: Download and Install the Arduino IDE</A></H3>The 
+Arduino IDE (Integrated Developer Environment) is an application that you can 
+use to program and interact with Arduino based microcontrollers like the 
+ArbotiX-M. You can find the Arduino IDE <A href="http://arduino.cc/en/Main/Software">here</A>. 
+Users can download the compressed Arduino IDE and decompress it to a location of 
+their choice. Windows users can also use the Windows Installer to automate this 
+process. The ArbotiX-M libraries have been thoroughly tested with Arduino 1.0.1 
+but should work with the most recent release (1.0.5 as of this writing). The 
+current library does not support older versions of Arduino (beta 18-23) or 
+Arduino 1.5 beta. <BR><BR>Once you have installed the Arduino IDE, open the 
+program. This will generate an 'Arduino' User Folder that you will use in Step 
+3. <!--
+If you need any help installing the Arduino IDE, check out <a href="/">Arduino.cc's great tutorial on installing the Arduino IDE.</a>
+--> 
+<H3><A name="step2">Step 2: Install the FTDI drivers</A></H3>Now you will need 
+to install FTDI drivers. These drives will allow your FTDI-USB cable or UartSBee 
+to function properly. Some modern Operating Systems either have these drivers or 
+can automatically find them. If you don't have the drivers or you are unsure, 
+you can find the FTDI drivers <A 
+href="http://www.ftdichip.com/Drivers/VCP.htm">here</A>, and a guide to 
+installing them <A href="http://www.ftdichip.com/Support/Documents/InstallGuides.htm"> 
+here</A>.  <BR>Note: Windows users can download the the drivers and install them 
+through the windows hardware wizard, or click on the 'setup executable' link 
+automate the process. 
+<H3><A name="step3">Step 3: Install the ArbotiX-M Hardware and Library 
+Files</A></H3>
+<P>For the Arduino IDE to support the ArbotiX-M, we'll need to add files into 
+the Arduino user folder. <A href="https://github.com/trossenrobotics/arbotix/archive/master.zip">Click 
+here to download the needed ArbotiX-M Library and Hardware Files</A> </P>
+<P>In this .zip file, there will be 3 folders  </P>
+<UL>
+  <LI><STRONG>hardware</STRONG>-this folder contains all of the hardware 
+  definitions that will allow the Arduino IDE to build programs for the 
+  ATMega644p on the ArbotiX-M. This folder also contains definitions for the 
+  AVRSTK500 serial programmer.	 
+  <LI><STRONG>libraries</STRONG>-this folder contains libraries that will help 
+  you use the ArbotiX-M to its full potential. Many of these libraries will be 
+  required to compile the programs for InterbotiX robots. Click <A href="http://learn.trossenrobotics.com/arbotix/35-arbotix-library-and-hardware-files">here<IMG 
+  style="margin-left: 3px;" src="ArbotiX%20Quick%20Start%20Guide_files/external.png"></A> 
+  for more information on the individual ArbotiX-M Libraries.	 
+  <LI><STRONG>ArbotiX Sketches</STRONG>-this folder contains test code and 
+  sample code for various ArbotiX-M projects and InterbotiX robots. </LI></UL>To 
+install the ArbotiX-M files you will move these 3 folders into your 'Arduino' 
+user folder. This is <STRONG>NOT</STRONG> the folder where the Arduino IDE 
+itself is located.  The location of this folder will be different based on your 
+operating system.						 
+<H4>Windows XP</H4>
+<PRE>My Documents\Arduino\</PRE>
+<H4>Windows Vista/7</H4>
+<PRE>Documents\Arduino\</PRE>
+<H4>Mac/Linux</H4>
+<PRE>~/Documents/Arduino/</PRE>
+<P>Where '~' represents the path to your user account. </P><BR>
+<PRE class="techTip">If you're having trouble finding your 'Arduino' folder, open the Arduino IDE and open the 'Preferences' panel (File-&gt;Preferences). Here you will find a file path under 'Sketchbook location:'. This is the path to your 'Arduino' folder.</PRE>
+<P>When you are done, your file path should look like this </P><BR><IFRAME 
+width="212" height="410" src="ArbotiX%20Quick%20Start%20Guide_files/test.htm" 
+scrolling="no" style="width: 212px; margin-right: auto; margin-left: auto; display: block;"></IFRAME><BR>
+<PRE class="techTip">If you aleady have a library or hardware folder, simply copy the contents of the ArbotiX-M Libary/Hardware folder into the library/hardware folder in your 'Arduino' folder.Your folder structure should look like the one shown above, along with your pre-installed files.</PRE>
+<P>Now open the Arduino IDE. You should see the following options 
+<UL>
+  <LI>Under
+<PRE> 'Sketch-&gt;Import Library-&gt;'</PRE> you should see 
+  <CODE>Bioloid</CODE> and <CODE>Commander</CODE> among other libraries	 
+  <LI>Under
+<PRE> 'Tools-&gt;Board-&gt;'</PRE> you should see <CODE>ArbotiX</CODE> and 
+  <CODE>ArbotiX w/ RX Shield</CODE> at the top of the list	 
+  <LI>Under 
+<PRE>'Tools-&gt;Programmer-&gt;'</PRE> you should see <CODE>AVR ISP 
+  mkII(Serial)</CODE> </LI></UL>
+<P></P>
+<P>If all of these are available, then your Arduino IDE is setup and ready to 
+program the ArbotiX-M! </P>
+<H3><A name="step4">Step 4: Connecting The Arbotix Robocontroller to your 
+Computer</A></H3>
+<P>To program the ArbotiX-M Robocontroller from your computer you will need an 
+FTDI-to-USB device. We recommend either the <A href="http://www.trossenrobotics.com/uartsbee">UartSBee</A> 
+or the <A 
+href="http://www.trossenrobotics.com/store/p/6406-FTDI-Cable-5V.aspx">FTDI-USB 
+Cable</A>.  
+<UL>
+  <LI>In this example we will power the ArbotiX-M from the FTDI port. Move the 
+  power jumper so that it connects the middle pin and the 'USB' pin ('FTDI' for 
+  the original ArbotiX).	 
+  <TABLE class="table table-bordered" style="margin-right: auto; margin-left: auto; max-width: 500px;">
+    <TBODY>
+    <TR>
+      <TD><IMG width="157" height="157" class="centered multithumb" alt="arbotixm-power-select-usb-sq.png" 
+        src="ArbotiX%20Quick%20Start%20Guide_files/arbotixm-power-select-usb-sq.png"></TD>
+      <TD><IMG width="157" height="157" class="centered multithumb" alt="arbotix-power-select-ftdi-sq.png" 
+        src="ArbotiX%20Quick%20Start%20Guide_files/arbotix-power-select-ftdi-sq.png"></TD></TR>
+    <TR>
+      <TD>					Power Jumper for ArbotiX-M				 </TD>
+      <TD>					Power Jumper for ArbotiX				 </TD></TR></TBODY></TABLE>
+  <LI>The orientation of the FTDI cable is very important - it is possible to 
+  plug in the cable backwards and you will not be able to program your board. 
+  The top FTDI pin with the mark 'BLK' will always connect to the black FTDI 
+  cable. This pin is a ground or 'GND' pin. The bottom pin with the mark 'GRN' 
+  will always connect to the Green FTDI cable.<A href="http://learn.trossenrobotics.com/arbotix/34-powering-the-arbotix">Click 
+  here<IMG style="margin-left: 3px;" src="ArbotiX%20Quick%20Start%20Guide_files/external.png"></A> 
+  to learn more about powering the ArbotiX-M 
+  <LI>If you are using the UartSBee, the 'BLK' and 'GRN' marking are on the 
+  underside of the board. 
+  <LI>If you are using a UartSBee, make sure that the switch is set to '5v' so 
+  that the unit is running at 5v like the ArbotiX-M 
+  <LI><A href="http://learn.trossenrobotics.com/arbotix/33-advanced-programming-guide-for-the-arbotix">Click 
+  here<IMG style="margin-left: 3px;" src="ArbotiX%20Quick%20Start%20Guide_files/external.png"></A> 
+  to learn about more options to program the ArbotiX-M </LI></UL>
+<P></P>
+<P></P>
+<TABLE class="table table-bordered">
+  <TBODY>
+  <TR>
+    <TD><A title="" class="modal" style="cursor: url(/plugins/content/multithumb/magnify.cur), auto;" 
+      href="http://learn.trossenrobotics.com/images/tutorials/arbotixM/arbotixm_uartsbee.png" 
+      target="_blank"><IMG width="450" height="123" class="thumb multithumb" 
+      style="margin-right: auto; margin-left: auto; display: block;" alt="b_450_0_16777215_00_http___learn.trossenrobotics.com_images_tutorials_arbotixM_arbotixm_uartsbee.png" 
+      src="ArbotiX%20Quick%20Start%20Guide_files/b_450_0_16777215_00_http___learn.trossenrobotics.com_images_tutorials_arbotixM_arbotixm_uartsbee.png"></A>
+      				 </TD>
+    <TD><A title="" class="modal" style="cursor: url(/plugins/content/multithumb/magnify.cur), auto;" 
+      href="http://learn.trossenrobotics.com/images/tutorials/arbotix/arbotix_uartsbee.png" 
+      target="_blank"><IMG width="450" height="123" class="thumb multithumb" 
+      style="margin-right: auto; margin-left: auto; display: block;" alt="b_450_0_16777215_00_http___learn.trossenrobotics.com_images_tutorials_arbotix_arbotix_uartsbee.png" 
+      src="ArbotiX%20Quick%20Start%20Guide_files/b_450_0_16777215_00_http___learn.trossenrobotics.com_images_tutorials_arbotix_arbotix_uartsbee.png"></A>
+      				 </TD></TR>
+  <TR>
+    <TD>					ArbotiX-M to UartSBee Connection				 </TD>
+    <TD>					ArbotiX to UartSBee Connection				 </TD></TR>
+  <TR>
+    <TD><A title="" class="modal" style="cursor: url(/plugins/content/multithumb/magnify.cur), auto;" 
+      href="http://learn.trossenrobotics.com/images/tutorials/arbotixM/arbotixm_ftdi_usb.png" 
+      target="_blank"><IMG width="400" height="169" class="thumb multithumb" 
+      style="margin-right: auto; margin-left: auto; display: block;" alt="b_400_400_16777215_00_http___learn.trossenrobotics.com_images_tutorials_arbotixM_arbotixm_ftdi_usb.png" 
+      src="ArbotiX%20Quick%20Start%20Guide_files/b_400_400_16777215_00_http___learn.trossenrobotics.com_images_tutorials_arbotixM_arbotixm_ftdi_usb.png"></A>
+      				 </TD>
+    <TD><A title="" class="modal" style="cursor: url(/plugins/content/multithumb/magnify.cur), auto;" 
+      href="http://learn.trossenrobotics.com/images/tutorials/arbotix/arbotix_ftdi_usb.png" 
+      target="_blank"><IMG width="400" height="186" class="thumb multithumb" 
+      style="margin-right: auto; margin-left: auto; display: block;" alt="b_400_400_16777215_00_http___learn.trossenrobotics.com_images_tutorials_arbotix_arbotix_ftdi_usb.png" 
+      src="ArbotiX%20Quick%20Start%20Guide_files/b_400_400_16777215_00_http___learn.trossenrobotics.com_images_tutorials_arbotix_arbotix_ftdi_usb.png"></A>
+      				 </TD></TR>
+  <TR>
+    <TD>					ArbotiX-M to FTDI-USB Connection				 </TD>
+    <TD>					ArbotiX to FTDI-USB Connection				 </TD></TR></TBODY></TABLE>
+<H3><A name="step5">Step 5: Program the ArbotiX-M Robocontroller to 
+Blink</A></H3>
+<P>Now that your ArbotiX-M is hooked up to your computer, you will need to pick 
+the <CODE>ArbotiX</CODE> board from the boards menu. Select the proper board: 
+<PRE>Tools-&gt;Board -&gt;ArbotiX</PRE>Now pick the serial port. Go to 
+<PRE>Tools -&gt;Serial Port</PRE>and pick the serial port for the FTDI device.  
+<PRE class="techTip">
+<UL>
+
+<LI>If you have multiple serial ports and you are not sure which one is the ArbotiX-M, unplug the FTDI device from the computer, and watch which  one dissapears.
+
+<LI>Mac and Linux users may have 2 ports - one marked 'cu.' and one marked 'tty.' Either will work.
+</LI></UL>
+</PRE>
+<P>Once you have set the board and serial port, you can open the 'ArbotixBlink' 
+sketch. </P>
+<PRE>File -&gt; Sketchbook -&gt; ArbotiX Sketches -&gt; Test Sketchs -&gt; ArbotiXBlink</PRE>
+Click on the 'Verify Button (the green check in the upper left). This will 
+attempt to compile the sketch. If all of the software is installed properly you 
+will see a 'Done Compiling' below. <BR>Click on the 'Upload' button (the green 
+arrow button next to the verify button). This will compile the sketch, and then 
+load it onto the ArbotiX-M. If the hardware is connected properly you will see 
+the green user light flicker while the Arduino IDE displays an 'Uploading' 
+message. When the Arduino IDE displays 'Done Uploading' the user LED should 
+blink on and off in a 1 second interval. <BR>Congratulations, you just 
+programmed your ArbotiX-M Board! 
+<P></P>
+<H3><A name="step5">Step 6: Program the ArbotiX-M Robocontroller to Move a 
+Servo</A></H3>
+<P>	Move the power jumper towards 'VIN'. This allow you to power the ArbotiX-M 
+from the external power supply. 				 
+<TABLE class="table table-bordered" style="margin-right: auto; margin-left: auto; max-width: 500px;">
+  <TBODY>
+  <TR>
+    <TD><IMG width="157" height="157" class="centered multithumb" alt="arbotixm-power-select-vin-sq.png" 
+      src="ArbotiX%20Quick%20Start%20Guide_files/arbotixm-power-select-vin-sq.png"></TD>
+    <TD><IMG width="157" height="157" class="centered multithumb" alt="arbotix-power-select-vin-sq.png" 
+      src="ArbotiX%20Quick%20Start%20Guide_files/arbotix-power-select-vin-sq.png"></TD></TR>
+  <TR>
+    <TD>					Power Jumper for ArbotiX-M				 </TD>
+    <TD>					Power Jumper for ArbotiX				 </TD></TR></TBODY></TABLE>
+<P></P>
+<P>	Next, connect your servo to the ArbotiX-M Robocontroller with a 3-pin 
+DYNAMIXEL cable. All three DYNAMIXEL ports on the ArbotiX-M are identical, so 
+you can plug the servo into any of them. <SPAN 
+class="icon-warning-sign"></SPAN><STRONG>Note:</STRONG> This example assumes 
+that you are using a new AX-12A or AX-18A. All new AX servos are set to ID #1, 
+which this example will target. This example is not intended for MX servos or 
+servos set to IDs other than '1'. </P>
+<P>	Now you will need to connect an external power supply to the ArbotiX-M 
+board. In this example we'll be using a <A hre="http://www.trossenrobotics.com/p/power-supply-12vdc-2a.aspx">12v 
+Switched Mode Power Supply</A> connected to the Arbotix's power terminals 
+through a <A href="http://www.trossenrobotics.com/store/p/6612-Barrel-Jack-Female-Pigtail-Lead-2-1-5-5mm.aspx">Barrel 
+Jack Pigtail</A>. </P>
+<TABLE class="table table-bordered">
+  <TBODY>
+  <TR>
+  <TR>
+    <TD><A title="" class="modal" style="cursor: url(/plugins/content/multithumb/magnify.cur), auto;" 
+      href="http://learn.trossenrobotics.com/images/tutorials/arbotixM/arbotixm_single_servo.png" 
+      target="_blank"><IMG width="385" height="400" class="thumb multithumb" 
+      alt="b_400_400_16777215_00_http___learn.trossenrobotics.com_images_tutorials_arbotixM_arbotixm_single_servo.png" 
+      src="ArbotiX%20Quick%20Start%20Guide_files/b_400_400_16777215_00_http___learn.trossenrobotics.com_images_tutorials_arbotixM_arbotixm_single_servo.png"></A>
+      				 </TD>
+    <TD><A title="" class="modal" style="cursor: url(/plugins/content/multithumb/magnify.cur), auto;" 
+      href="http://learn.trossenrobotics.com/images/tutorials/arbotix/arbotix_servo.png" 
+      target="_blank"><IMG width="400" height="350" class="thumb multithumb" 
+      alt="b_400_400_16777215_00_http___learn.trossenrobotics.com_images_tutorials_arbotix_arbotix_servo.png" 
+      src="ArbotiX%20Quick%20Start%20Guide_files/b_400_400_16777215_00_http___learn.trossenrobotics.com_images_tutorials_arbotix_arbotix_servo.png"></A>
+      				 </TD></TR>
+  <TR>
+    <TD>					Single Servo Setup for ArbotiX-M				 </TD>
+    <TD>					Single Servo Setup for ArbotiX				 </TD></TR></TBODY></TABLE>
+<P>	Now load the following sketch onto the ArbotiX-M Robocontroller </P>
+<PRE>File -&gt; Sketchbook -&gt; ArbotiX Sketches -&gt; Test Sketchs -&gt; AXSimpleTest</PRE>
+<P>The servo should now begin to rotate counter clockwise, then clockwise. It 
+will repeat this behavior until you power off the ArbotiX-M or re-program it. 
+</P>
+<P>Next : <A href="http://learn.trossenrobotics.com/arbotix/1-using-the-tr-dynamixel-servo-tool#&amp;panel1-1">Setting 
+DYNAMIXEL IDs with the DynaManager</A></P></ARTICLE></DIV></DIV></DIV></DIV>
+<DIV class="clear"></DIV></DIV></DIV></DIV></DIV>
+<DIV id="rt-bottom">
+<DIV class="rt-container">
+<DIV class="rt-grid-12 rt-alpha rt-omega">
+<DIV class="rt-block ">
+<DIV class="module-surround">
+<DIV class="module-content">
+<DIV class="search">
+<FORM class="form-inline" action="/arbotix" method="post"><LABEL class="element-invisible" 
+for="mod-search-searchword">Search...</LABEL> <INPUT name="searchword" class="inputbox search-query" id="mod-search-searchword" onfocus="if (this.value=='Search...') this.value='';" onblur="if (this.value=='') this.value='Search...';" type="text" size="20" maxlength="20" value="Search..."> 
+   	<INPUT name="task" type="hidden" value="search">    
+	 <INPUT name="option" type="hidden" value="com_search">    	 <INPUT name="Itemid" type="hidden" value="106"> 
+    </FORM></DIV></DIV></DIV></DIV></DIV>
+<DIV class="clear"></DIV></DIV></DIV></BODY></HTML>

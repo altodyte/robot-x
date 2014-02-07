@@ -1,0 +1,34 @@
+if(Serial.available() > 0) {
+            // read the incoming byte
+            startByte = Serial.read(); 
+            // toggle LED so we know johnny5 is alive
+            digitalWrite(0,HIGH-digitalRead(0));  
+        } // end Serial.available()
+        if(startByte == '#') {
+            // get the command from the serial port
+            while(Serial.available() < 8); // wait for data to arrive, do nothing      
+            for(int i=0;i<8;i++){
+                cmd[i] = Serial.read();
+            } //this creates an array that takes in the data from the serial     port      
+            // convert command to two numbers
+            int servoNum = 0;
+            int servoPos = 0;
+
+            servoNum = (cmd[0]-48)*10 + (cmd[1]-48);
+            //builds the 2 diget servo Id number
+            servoPos = (cmd[3]-48)*1000 + (cmd[4]-48)*100 + (cmd[5]-48)*10 + (cmd[6]-48);
+            //builds the 4 diget goal position
+            SetPosition(servoNum,servoPos);
+            //sets servo position using 2 numbers one for servo, other for position.
+            // debug
+            Serial.print("cmd array:");
+            for(int i=0;i<8;i++){
+                Serial.print(cmd[i]);
+            }
+            Serial.println("----");
+            Serial.print("servoNum:");
+            Serial.println(servoNum);
+            Serial.print("servoPos:");
+            Serial.println(servoPos);
+
+        }// end if(startByte == '#')

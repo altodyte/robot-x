@@ -1,0 +1,19 @@
+this is where we will put our data
+int myData = 0;
+void setup()
+ {
+//start up our serial port, we configured our XBEE devices for 38400 bps.
+Serial.begin(38400);
+ }
+void loop()
+ {
+// handle serial data, if any
+if(Serial.available() > 0)
+ {
+ myData = Serial.read();
+if(myData == '\n')
+Serial.print(myData,BYTE);
+else
+Serial.print(myData + 1,BYTE);
+ }
+ } 
