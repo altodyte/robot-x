@@ -1,0 +1,19 @@
+Note to Robotics 2 people:
+
+To use the camera location:
+
+1.Open Max
+2.open the camera 
+3.Grap images
+4.Turn the room lights by pressing the 4th button from the top
+4A. Close the shades on the window
+5.Good to white balance page
+6.Set the white value to 150
+7.Press Auto Calculate Gains.
+8.Save the setup
+9.Close MAX
+
+10.Go to the folder "RB2 Base Station"
+11.Run "RB2 base station main 3"
+
+12 On your PC run"RB2 PC comm demo"
