@@ -170,6 +170,8 @@ void Send_Return_String(int numread)
     
     Serial.write(returnbuffer, 3);  //return the bytes read
     Serial.print(ir_volt,3);  //sent the IR distance sensor
+    Serial.print('b');
+    Serial.print(bat_volt, 3); //send the battery info
     Serial.write(0x0A);  //a newline, \n
   }
   
