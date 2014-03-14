@@ -1,4 +1,4 @@
-//*****Xboat_3************
+//*****RobotX MIT-Olin Miniboat Code************
 
 /*This is the operating program for the model of the RobotX boat.
   It is based upon the Arbotix-M controller PCB and Arduino Software.
@@ -8,6 +8,8 @@
   They are set to 38400 baud, 8, N, 1, N and have a preset protocol.
   
   The PC initiates all communication and expects a return confirming operation.
+  
+  Last Revised: March 14, 2014, VPreston and BWarner
 */  
 //***************************************************************************
 
